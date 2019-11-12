@@ -1,5 +1,5 @@
 #ifndef _MATRIX_H
-#define _MAYTIX_H
+#define _MATRIX_H
 
 #include "Neuron.h"
 #include <iostream>
@@ -8,27 +8,35 @@
 class Matrix
 {
     public:
-        Matrix();
-
-        explicit Matrix(unsigned int numRows, unsigned int numCols, bool isRandom);
+ 
+         Matrix(size_t numRows, size_t numCols, bool isRandom);
 
         ~Matrix();
 
         Matrix* transpose();
 
-        void setvalue(unsigned int r, unsigned int c, double v);
+        void setvalue(size_t r, size_t c, double v);
 
-        double getValue(unsigned int r, unsigned int c);
+        double getValue(size_t r, size_t c);
 
         double generateRandomNumber();
 
+        void printToConsole();
+
+        void init();
+
+        size_t getNumRows(){return m_numRows;}
+        size_t getNumCols(){return m_numCols;}
+
     private:
 
-        unsigned int m_numRows; 
-        unsigned int m_numCols;
+        size_t m_numRows; 
+        size_t m_numCols;
         bool m_isRandom;
 
         std::vector <  std::vector<double> > m_values;
+
+        Matrix* m_transpose;
 };
 
 

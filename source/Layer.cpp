@@ -17,3 +17,42 @@ Layer::~Layer()
 
     m_neurons.clear();
 }
+
+void Layer::setValue(int i, double v)
+{
+    m_neurons.at(i)->setVal(v);
+}
+
+Matrix* Layer::matrixifyVal()
+{
+    Matrix *m = new Matrix(1, m_neurons.size(), false);
+    for (auto i = 0; i < m_size; ++i)
+    {
+        m->setvalue(0, i, m_neurons.at(i)->getVal());
+    }
+
+    return m;
+}
+
+Matrix* Layer::matrixifyActivatedVal()
+{
+    Matrix *m = new Matrix(1, m_neurons.size(), false);
+    for (auto i = 0; i < m_size; ++i)
+    {
+        m->setvalue(0, i, m_neurons.at(i)->getActivatedVal());
+    }
+
+    return m;
+
+}
+
+Matrix* Layer::matrixifyDerivedvals()
+{
+        Matrix *m = new Matrix(1, m_neurons.size(), false);
+    for (auto i = 0; i < m_size; ++i)
+    {
+        m->setvalue(0, i, m_neurons.at(i)->getDerivedVal());
+    }
+
+    return m;
+}
