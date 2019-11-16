@@ -5,7 +5,9 @@ project(NeuralNetwork)
 
 SET(SOURCES main.cpp 
             source/Neuron.cpp
-            source/Layer.cpp )
+            source/Layer.cpp
+            source/Matrix.cpp
+            source/NeuralNetwork.cpp)
 
 # add the executable
 add_executable(${PROJECT_NAME} ${SOURCES})
