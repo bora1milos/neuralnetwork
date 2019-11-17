@@ -23,7 +23,6 @@ typedef struct {
   std::string weightsFile;
 }ANNConfig;
 
-
 class NeuralNetwork
 {
     public:
@@ -67,6 +66,7 @@ class NeuralNetwork
           
         FUNCTION_TYPE m_hiddenActivationType  = RELU;
         FUNCTION_TYPE m_outputActivationType  = SIGM;
+
         int m_costFunctionType      = COST_MSE;
 
         double m_bias  { 1 };
@@ -80,6 +80,7 @@ class NeuralNetwork
         std::vector<double> m_derivedErrors;
 
         void setErrorMSE();
+
         ANNConfig m_config;
 
 };
