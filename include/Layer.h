@@ -11,8 +11,8 @@ typedef std::vector<Neuron* > NEURONS;
 class Layer
 {
     public:
-        Layer();
         explicit Layer(size_t size);
+        explicit Layer(size_t size, FUNCTION_TYPE activationType);
 
         ~Layer();
 
@@ -21,6 +21,9 @@ class Layer
         Matrix *matrixifyVals();
         Matrix *matrixifyActivatedVals();
         Matrix *matrixifyDerivedVals();
+
+
+        std::vector<double> getActivatedVals();
 
         const NEURONS getNeurons() const {return m_neurons;}
         void setNeurons(NEURONS neurons) {m_neurons = neurons;}

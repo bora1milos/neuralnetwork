@@ -1,6 +1,6 @@
 #include "NeuralNetwork.h"
 
-NeuralNetwork::NeuralNetwork(){}
+NeuralNetwork::NeuralNetwork(ANNConfig config){}
 
 NeuralNetwork::NeuralNetwork(std::vector<int> topology): m_topology{topology}
 {
@@ -35,7 +35,7 @@ NeuralNetwork::~NeuralNetwork()
 void NeuralNetwork::setCurrentInput(std::vector<double> input)
 {
     m_currentInput = input;  
-    for(auto i = 0; i < input.size(); ++i)
+    for (auto i = 0; i < input.size(); ++i)
     {
         m_layers.at(0)->setValue(i, input.at(i));
     }
@@ -57,3 +57,5 @@ void NeuralNetwork::printToconsole()
         }
     }
 }
+
+void  NeuralNetwork::setErrorMSE(){}
