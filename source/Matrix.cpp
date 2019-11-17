@@ -39,11 +39,23 @@ Matrix* Matrix::transpose()
     {
         for (size_t j = 0; j < m_numCols; ++j)
         {
-           m_transpose->setvalue(j, i , this->getValue(i, j)); 
+           m_transpose->setValue(j, i , this->getValue(i, j)); 
         }
     }
 
     return m_transpose;
+}
+
+Matrix *Matrix::copy() {
+  Matrix *m = new Matrix(m_numRows, m_numCols, false);
+
+  for(int i = 0; i < m_numRows; i++) {
+    for(int j = 0; j < m_numCols; j++) {
+      m->setValue(i, j, getValue(i, j));
+    }
+  }
+
+  return m;
 }
 
 void Matrix::printToConsole()
@@ -58,7 +70,7 @@ void Matrix::printToConsole()
     }
 }
 
-void Matrix::setvalue(size_t r, size_t c, double v)
+void Matrix::setValue(size_t r, size_t c, double v)
 {
    m_values.at(r).at(c) = v;
 }

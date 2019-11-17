@@ -18,9 +18,12 @@ class Layer
 
         void setValue(int i, double v);
 
-        Matrix* matrixifyVal();
-        Matrix* matrixifyActivatedVal();
-        Matrix* matrixifyDerivedvals();
+        Matrix *matrixifyVals();
+        Matrix *matrixifyActivatedVals();
+        Matrix *matrixifyDerivedVals();
+
+        const NEURONS getNeurons() const {return m_neurons;}
+        void setNeurons(NEURONS neurons) {m_neurons = neurons;}
 
     private:
         size_t m_size;

@@ -1,5 +1,11 @@
 #include <iostream>
 #include <memory>
+#include <stdio.h>
+#include <fstream>
+#include <streambuf>
+#include <ostream>
+#include <time.h>
+
 
 #include "Neuron.h"
 #include "Layer.h"

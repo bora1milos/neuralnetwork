@@ -20,12 +20,24 @@ class NeuralNetwork
 
         ~NeuralNetwork();
 
+        Matrix *getNeuronMatrix(int index) { return m_layers.at(index)->matrixifyVals(); }
+        Matrix *getActivatedNeuronMatrix(int index) { return m_layers.at(index)->matrixifyActivatedVals(); }
+        Matrix *getDerivedNeuronMatrix(int index) { return m_layers.at(index)->matrixifyDerivedVals(); }
+        //Matrix *getWeightMatrix(int index) { return new Matrix(m_weightMatrices.at(index)); }
+
     private:
         size_t m_topologySize;
         std::vector<int> m_topology;
         std::vector<Layer*> m_layers;
-        std::vector<Matrix*> m_weightMatrix;
+        std::vector<Matrix*> m_weightMatrices;
         std::vector<double> m_currentInput;
+        std::vector<double> m_inputs;
+        std::vector<double> m_targets;
+        double m_error;
+        std::vector<double> m_errors;
+        std::vector<double> m_historicalError;
+    
+
 };
 
 

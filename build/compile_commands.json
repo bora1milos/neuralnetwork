@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/home/bb/Projects/c++/neuralnetwork/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-7   -I/home/bb/Projects/c++/neuralnetwork/include   -fopenmp -pthread -std=c++14 -g   -o CMakeFiles/NeuralNetwork.dir/main.cpp.o -c /home/bb/Projects/c++/neuralnetwork/main.cpp",
+  "file": "/home/bb/Projects/c++/neuralnetwork/main.cpp"
+},
+{
+  "directory": "/home/bb/Projects/c++/neuralnetwork/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-7   -I/home/bb/Projects/c++/neuralnetwork/include   -fopenmp -pthread -std=c++14 -g   -o CMakeFiles/NeuralNetwork.dir/source/Neuron.cpp.o -c /home/bb/Projects/c++/neuralnetwork/source/Neuron.cpp",
+  "file": "/home/bb/Projects/c++/neuralnetwork/source/Neuron.cpp"
+},
+{
+  "directory": "/home/bb/Projects/c++/neuralnetwork/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-7   -I/home/bb/Projects/c++/neuralnetwork/include   -fopenmp -pthread -std=c++14 -g   -o CMakeFiles/NeuralNetwork.dir/source/Layer.cpp.o -c /home/bb/Projects/c++/neuralnetwork/source/Layer.cpp",
+  "file": "/home/bb/Projects/c++/neuralnetwork/source/Layer.cpp"
+},
+{
+  "directory": "/home/bb/Projects/c++/neuralnetwork/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-7   -I/home/bb/Projects/c++/neuralnetwork/include   -fopenmp -pthread -std=c++14 -g   -o CMakeFiles/NeuralNetwork.dir/source/Matrix.cpp.o -c /home/bb/Projects/c++/neuralnetwork/source/Matrix.cpp",
+  "file": "/home/bb/Projects/c++/neuralnetwork/source/Matrix.cpp"
+},
+{
+  "directory": "/home/bb/Projects/c++/neuralnetwork/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-7   -I/home/bb/Projects/c++/neuralnetwork/include   -fopenmp -pthread -std=c++14 -g   -o CMakeFiles/NeuralNetwork.dir/source/NeuralNetwork.cpp.o -c /home/bb/Projects/c++/neuralnetwork/source/NeuralNetwork.cpp",
+  "file": "/home/bb/Projects/c++/neuralnetwork/source/NeuralNetwork.cpp"
+},
+{
+  "directory": "/home/bb/Projects/c++/neuralnetwork/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-7   -I/home/bb/Projects/c++/neuralnetwork/include   -fopenmp -pthread -std=c++14 -g   -o CMakeFiles/NeuralNetwork.dir/source/util/Math.cpp.o -c /home/bb/Projects/c++/neuralnetwork/source/util/Math.cpp",
+  "file": "/home/bb/Projects/c++/neuralnetwork/source/util/Math.cpp"
+}
+]

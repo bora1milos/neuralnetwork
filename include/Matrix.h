@@ -13,9 +13,10 @@ class Matrix
 
         ~Matrix();
 
+        Matrix *copy();
         Matrix* transpose();
 
-        void setvalue(size_t r, size_t c, double v);
+        void setValue(size_t r, size_t c, double v);
 
         double getValue(size_t r, size_t c);
 

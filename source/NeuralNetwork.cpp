@@ -14,7 +14,7 @@ NeuralNetwork::NeuralNetwork(std::vector<int> topology): m_topology{topology}
     for(auto i = 0; i < m_topologySize - i; ++i)
     {
         Matrix *m = new Matrix(topology.at(i), topology.at(i +1), true);
-        m_weightMatrix.push_back(m);
+        m_weightMatrices.push_back(m);
     }
 }
 
@@ -27,7 +27,7 @@ NeuralNetwork::~NeuralNetwork()
 
     for(auto i = 0; i < m_topologySize - i; ++i)
     {
-        delete m_weightMatrix[i];
+        delete m_weightMatrices[i];
     }
 
 }
@@ -47,12 +47,12 @@ void NeuralNetwork::printToconsole()
     {
         std::cout << "LAYER: " << i << std::endl;
         if (i==0){
-            Matrix *m = m_layers.at(i)->matrixifyVal();
+            Matrix *m = m_layers.at(i)->matrixifyVals();
             m->printToConsole();
         }
         else
         {
-            Matrix* m = m_layers.at(i)->matrixifyActivatedVal();
+            Matrix* m = m_layers.at(i)->matrixifyActivatedVals();
             m->printToConsole();
         }
     }
