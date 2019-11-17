@@ -20,11 +20,7 @@ void Matrix::init()
        std::vector<double> colValues;
        for (size_t j = 0; j < m_numCols; ++j)
        {
-           auto r = 0.0;
-           if (m_isRandom)
-           {
-               r = generateRandomNumber();
-           }
+           double r = m_isRandom == true ? this->generateRandomNumber() : 0.00;
            colValues.push_back(r);
        }
        m_values.push_back(colValues); 
@@ -46,11 +42,13 @@ Matrix* Matrix::transpose()
     return m_transpose;
 }
 
-Matrix *Matrix::copy() {
+Matrix *Matrix::copy() 
+{
   Matrix *m = new Matrix(m_numRows, m_numCols, false);
-
-  for(int i = 0; i < m_numRows; i++) {
-    for(int j = 0; j < m_numCols; j++) {
+  for(int i = 0; i < m_numRows; i++) 
+  {
+    for(int j = 0; j < m_numCols; j++) 
+    {
       m->setValue(i, j, getValue(i, j));
     }
   }
