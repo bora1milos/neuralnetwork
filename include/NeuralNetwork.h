@@ -3,6 +3,7 @@
 
 #include "Layer.h"
 #include "Matrix.h"
+#include "json.h"
 
 #include <iostream>
 #include <vector>
@@ -50,6 +51,8 @@ class NeuralNetwork
         Matrix *getActivatedNeuronMatrix(int index) { return m_layers.at(index)->matrixifyActivatedVals(); }
         Matrix *getDerivedNeuronMatrix(int index) { return m_layers.at(index)->matrixifyDerivedVals(); }
         Matrix *getWeightMatrix(int index) { return m_weightMatrices.at(index); }
+
+        void loadWeights(std::string filename) ;
 
     private:
         size_t m_topologySize;
