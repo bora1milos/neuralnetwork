@@ -15,6 +15,7 @@ std::vector< std::vector<double> > utils::Misc::fetchData(std::string path)
 
     while(getline(ss, tok, ',')) 
     {
+
       dRow.push_back(stof(tok));
     }
 
