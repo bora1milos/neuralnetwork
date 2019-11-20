@@ -285,6 +285,33 @@ source/util/Math.cpp.s:
 	$(MAKE) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/source/util/Math.cpp.s
 .PHONY : source/util/Math.cpp.s
 
+source/util/Misc.o: source/util/Misc.cpp.o
+
+.PHONY : source/util/Misc.o
+
+# target to build an object file
+source/util/Misc.cpp.o:
+	$(MAKE) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/source/util/Misc.cpp.o
+.PHONY : source/util/Misc.cpp.o
+
+source/util/Misc.i: source/util/Misc.cpp.i
+
+.PHONY : source/util/Misc.i
+
+# target to preprocess a source file
+source/util/Misc.cpp.i:
+	$(MAKE) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/source/util/Misc.cpp.i
+.PHONY : source/util/Misc.cpp.i
+
+source/util/Misc.s: source/util/Misc.cpp.s
+
+.PHONY : source/util/Misc.s
+
+# target to generate assembly for a file
+source/util/Misc.cpp.s:
+	$(MAKE) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/source/util/Misc.cpp.s
+.PHONY : source/util/Misc.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -312,6 +339,9 @@ help:
 	@echo "... source/util/Math.o"
 	@echo "... source/util/Math.i"
 	@echo "... source/util/Math.s"
+	@echo "... source/util/Misc.o"
+	@echo "... source/util/Misc.i"
+	@echo "... source/util/Misc.s"
 .PHONY : help
 
 

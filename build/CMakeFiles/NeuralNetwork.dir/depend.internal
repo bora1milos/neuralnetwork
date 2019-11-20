@@ -6,6 +6,7 @@ CMakeFiles/NeuralNetwork.dir/main.cpp.o
  ../include/Matrix.h
  ../include/NeuralNetwork.h
  ../include/Neuron.h
+ ../include/json.h
  ../include/util/Math.h
  /home/bb/Projects/c++/neuralnetwork/main.cpp
  /home/bb/Projects/c++/neuralnetwork/source/Layer.cpp
@@ -18,6 +19,7 @@ CMakeFiles/NeuralNetwork.dir/source/Layer.cpp.o
  ../include/Matrix.h
  ../include/NeuralNetwork.h
  ../include/Neuron.h
+ ../include/json.h
  ../include/util/Math.h
  /home/bb/Projects/c++/neuralnetwork/main.cpp
  /home/bb/Projects/c++/neuralnetwork/source/Layer.cpp
@@ -30,6 +32,7 @@ CMakeFiles/NeuralNetwork.dir/source/Matrix.cpp.o
  ../include/Matrix.h
  ../include/NeuralNetwork.h
  ../include/Neuron.h
+ ../include/json.h
  ../include/util/Math.h
  /home/bb/Projects/c++/neuralnetwork/main.cpp
  /home/bb/Projects/c++/neuralnetwork/source/Layer.cpp
@@ -42,6 +45,7 @@ CMakeFiles/NeuralNetwork.dir/source/NeuralNetwork.cpp.o
  ../include/Matrix.h
  ../include/NeuralNetwork.h
  ../include/Neuron.h
+ ../include/json.h
  ../include/util/Math.h
  /home/bb/Projects/c++/neuralnetwork/main.cpp
  /home/bb/Projects/c++/neuralnetwork/source/Layer.cpp
@@ -57,6 +61,7 @@ CMakeFiles/NeuralNetwork.dir/source/util/Math.cpp.o
  ../include/Matrix.h
  ../include/NeuralNetwork.h
  ../include/Neuron.h
+ ../include/json.h
  ../include/util/Math.h
  /home/bb/Projects/c++/neuralnetwork/main.cpp
  /home/bb/Projects/c++/neuralnetwork/source/Layer.cpp
@@ -64,3 +69,6 @@ CMakeFiles/NeuralNetwork.dir/source/util/Math.cpp.o
  /home/bb/Projects/c++/neuralnetwork/source/NeuralNetwork.cpp
  /home/bb/Projects/c++/neuralnetwork/source/Neuron.cpp
  /home/bb/Projects/c++/neuralnetwork/source/util/Math.cpp
+CMakeFiles/NeuralNetwork.dir/source/util/Misc.cpp.o
+ ../include/util/Misc.h
+ /home/bb/Projects/c++/neuralnetwork/source/util/Misc.cpp

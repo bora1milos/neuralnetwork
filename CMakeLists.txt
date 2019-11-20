@@ -11,7 +11,8 @@ SET(SOURCES main.cpp
             source/Layer.cpp
             source/Matrix.cpp
             source/NeuralNetwork.cpp
-            source/util/Math.cpp)
+            source/util/Math.cpp
+            source/util/Misc.cpp)
 
 # add the executable
 add_executable(${PROJECT_NAME} ${SOURCES})
