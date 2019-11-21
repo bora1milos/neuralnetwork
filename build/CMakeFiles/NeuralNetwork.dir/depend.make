@@ -6,39 +6,17 @@ CMakeFiles/NeuralNetwork.dir/main.cpp.o: ../include/Matrix.h
 CMakeFiles/NeuralNetwork.dir/main.cpp.o: ../include/NeuralNetwork.h
 CMakeFiles/NeuralNetwork.dir/main.cpp.o: ../include/Neuron.h
 CMakeFiles/NeuralNetwork.dir/main.cpp.o: ../include/json.h
-CMakeFiles/NeuralNetwork.dir/main.cpp.o: ../include/util/Math.h
+CMakeFiles/NeuralNetwork.dir/main.cpp.o: ../include/util/Misc.h
 CMakeFiles/NeuralNetwork.dir/main.cpp.o: ../main.cpp
-CMakeFiles/NeuralNetwork.dir/main.cpp.o: ../source/Layer.cpp
-CMakeFiles/NeuralNetwork.dir/main.cpp.o: ../source/Matrix.cpp
-CMakeFiles/NeuralNetwork.dir/main.cpp.o: ../source/NeuralNetwork.cpp
-CMakeFiles/NeuralNetwork.dir/main.cpp.o: ../source/Neuron.cpp
-CMakeFiles/NeuralNetwork.dir/main.cpp.o: ../source/util/Math.cpp
 
 CMakeFiles/NeuralNetwork.dir/source/Layer.cpp.o: ../include/Layer.h
 CMakeFiles/NeuralNetwork.dir/source/Layer.cpp.o: ../include/Matrix.h
-CMakeFiles/NeuralNetwork.dir/source/Layer.cpp.o: ../include/NeuralNetwork.h
 CMakeFiles/NeuralNetwork.dir/source/Layer.cpp.o: ../include/Neuron.h
-CMakeFiles/NeuralNetwork.dir/source/Layer.cpp.o: ../include/json.h
-CMakeFiles/NeuralNetwork.dir/source/Layer.cpp.o: ../include/util/Math.h
-CMakeFiles/NeuralNetwork.dir/source/Layer.cpp.o: ../main.cpp
 CMakeFiles/NeuralNetwork.dir/source/Layer.cpp.o: ../source/Layer.cpp
-CMakeFiles/NeuralNetwork.dir/source/Layer.cpp.o: ../source/Matrix.cpp
-CMakeFiles/NeuralNetwork.dir/source/Layer.cpp.o: ../source/NeuralNetwork.cpp
-CMakeFiles/NeuralNetwork.dir/source/Layer.cpp.o: ../source/Neuron.cpp
-CMakeFiles/NeuralNetwork.dir/source/Layer.cpp.o: ../source/util/Math.cpp
 
-CMakeFiles/NeuralNetwork.dir/source/Matrix.cpp.o: ../include/Layer.h
 CMakeFiles/NeuralNetwork.dir/source/Matrix.cpp.o: ../include/Matrix.h
-CMakeFiles/NeuralNetwork.dir/source/Matrix.cpp.o: ../include/NeuralNetwork.h
 CMakeFiles/NeuralNetwork.dir/source/Matrix.cpp.o: ../include/Neuron.h
-CMakeFiles/NeuralNetwork.dir/source/Matrix.cpp.o: ../include/json.h
-CMakeFiles/NeuralNetwork.dir/source/Matrix.cpp.o: ../include/util/Math.h
-CMakeFiles/NeuralNetwork.dir/source/Matrix.cpp.o: ../main.cpp
-CMakeFiles/NeuralNetwork.dir/source/Matrix.cpp.o: ../source/Layer.cpp
 CMakeFiles/NeuralNetwork.dir/source/Matrix.cpp.o: ../source/Matrix.cpp
-CMakeFiles/NeuralNetwork.dir/source/Matrix.cpp.o: ../source/NeuralNetwork.cpp
-CMakeFiles/NeuralNetwork.dir/source/Matrix.cpp.o: ../source/Neuron.cpp
-CMakeFiles/NeuralNetwork.dir/source/Matrix.cpp.o: ../source/util/Math.cpp
 
 CMakeFiles/NeuralNetwork.dir/source/NeuralNetwork.cpp.o: ../include/Layer.h
 CMakeFiles/NeuralNetwork.dir/source/NeuralNetwork.cpp.o: ../include/Matrix.h
@@ -46,27 +24,14 @@ CMakeFiles/NeuralNetwork.dir/source/NeuralNetwork.cpp.o: ../include/NeuralNetwor
 CMakeFiles/NeuralNetwork.dir/source/NeuralNetwork.cpp.o: ../include/Neuron.h
 CMakeFiles/NeuralNetwork.dir/source/NeuralNetwork.cpp.o: ../include/json.h
 CMakeFiles/NeuralNetwork.dir/source/NeuralNetwork.cpp.o: ../include/util/Math.h
-CMakeFiles/NeuralNetwork.dir/source/NeuralNetwork.cpp.o: ../main.cpp
-CMakeFiles/NeuralNetwork.dir/source/NeuralNetwork.cpp.o: ../source/Layer.cpp
-CMakeFiles/NeuralNetwork.dir/source/NeuralNetwork.cpp.o: ../source/Matrix.cpp
 CMakeFiles/NeuralNetwork.dir/source/NeuralNetwork.cpp.o: ../source/NeuralNetwork.cpp
-CMakeFiles/NeuralNetwork.dir/source/NeuralNetwork.cpp.o: ../source/Neuron.cpp
-CMakeFiles/NeuralNetwork.dir/source/NeuralNetwork.cpp.o: ../source/util/Math.cpp
 
 CMakeFiles/NeuralNetwork.dir/source/Neuron.cpp.o: ../include/Neuron.h
 CMakeFiles/NeuralNetwork.dir/source/Neuron.cpp.o: ../source/Neuron.cpp
 
-CMakeFiles/NeuralNetwork.dir/source/util/Math.cpp.o: ../include/Layer.h
 CMakeFiles/NeuralNetwork.dir/source/util/Math.cpp.o: ../include/Matrix.h
-CMakeFiles/NeuralNetwork.dir/source/util/Math.cpp.o: ../include/NeuralNetwork.h
 CMakeFiles/NeuralNetwork.dir/source/util/Math.cpp.o: ../include/Neuron.h
-CMakeFiles/NeuralNetwork.dir/source/util/Math.cpp.o: ../include/json.h
 CMakeFiles/NeuralNetwork.dir/source/util/Math.cpp.o: ../include/util/Math.h
-CMakeFiles/NeuralNetwork.dir/source/util/Math.cpp.o: ../main.cpp
-CMakeFiles/NeuralNetwork.dir/source/util/Math.cpp.o: ../source/Layer.cpp
-CMakeFiles/NeuralNetwork.dir/source/util/Math.cpp.o: ../source/Matrix.cpp
-CMakeFiles/NeuralNetwork.dir/source/util/Math.cpp.o: ../source/NeuralNetwork.cpp
-CMakeFiles/NeuralNetwork.dir/source/util/Math.cpp.o: ../source/Neuron.cpp
 CMakeFiles/NeuralNetwork.dir/source/util/Math.cpp.o: ../source/util/Math.cpp
 
 CMakeFiles/NeuralNetwork.dir/source/util/Misc.cpp.o: ../include/util/Misc.h

@@ -4,8 +4,7 @@
 
 Matrix::~Matrix()
 {
-    if (m_transpose != nullptr)
-        delete m_transpose;
+   
 }
 
 Matrix::Matrix(size_t numRows, size_t numCols,  bool isRandom):m_numRows{numRows}, m_numCols{numCols}, m_isRandom{isRandom}, m_transpose{nullptr}

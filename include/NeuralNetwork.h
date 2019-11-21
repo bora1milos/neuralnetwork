@@ -45,14 +45,16 @@ class NeuralNetwork
         std::vector<double> getActivatedVals(int index) { return m_layers.at(index)->getActivatedVals(); }
         void setNeuronValue(int indexLayer, int indexNeuron, double val) { m_layers.at(indexLayer)->setValue(indexNeuron, val); }
 
-
+        void saveWeights(std::string file);
+        void loadWeights(std::string file);
 
         Matrix *getNeuronMatrix(int index) { return m_layers.at(index)->matrixifyVals(); }
         Matrix *getActivatedNeuronMatrix(int index) { return m_layers.at(index)->matrixifyActivatedVals(); }
         Matrix *getDerivedNeuronMatrix(int index) { return m_layers.at(index)->matrixifyDerivedVals(); }
-        Matrix *getWeightMatrix(int index) { return m_weightMatrices.at(index); }
+        Matrix *getWeightMatrix(int index) { return new Matrix(*m_weightMatrices.at(index)); };
 
-        void loadWeights(std::string filename) ;
+        const ANNConfig getConfig() const { return m_config; }
+        const double getError() const { return m_error; } 
 
     private:
         size_t m_topologySize;

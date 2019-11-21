@@ -1,48 +1,90 @@
 #include <iostream>
-#include <memory>
+#include <vector>
 #include <stdio.h>
 #include <fstream>
 #include <streambuf>
 #include <ostream>
 #include <time.h>
-
-
-#include "Neuron.h"
-#include "Layer.h"
-#include "Matrix.h"
+#include "json.h"
 #include "NeuralNetwork.h"
+#include "util/Misc.h"
 
-int main(int argc, char** arvg)
-{
-   std::vector<int> topology;
-   std::vector<double> input;
+using namespace std;
+using json = nlohmann::json;
 
-   topology.push_back(3);
-   topology.push_back(2);
-   topology.push_back(3);
+void printSyntax() {
+  cout << "Syntax:" << endl;
+  cout << "train [configFile]" << endl;
+}
 
+ANNConfig buildConfig(json configObject) {
+  ANNConfig config;
 
-   input.push_back(1.0);
-   input.push_back(0.0);
-   input.push_back(1.0);
+  double learningRate   = configObject["learningRate"];
+  double momentum       = configObject["momentum"];
+  double bias           = configObject["bias"];
+  int epoch             = configObject["epoch"];
+  string trainingFile   = configObject["trainingFile"];
+  string labelsFile     = configObject["labelsFile"];
+  string weightsFile    = configObject["weightsFile"];
+  vector<int> topology  = configObject["topology"];
 
-   std::unique_ptr<Neuron> n  {new Neuron(1.5)};
-   std::unique_ptr<Layer> layer {new Layer(5)};
-   std::unique_ptr<Matrix> matrix (new Matrix(3, 2, true));
-   std::unique_ptr<NeuralNetwork> nn (new NeuralNetwork(topology));
+  FUNCTION_TYPE hActivation  = configObject["hActivation"];
+  FUNCTION_TYPE oActivation  = configObject["oActivation"];
 
-   nn->setCurrentInput(input);
+  config.topology     = topology;
+  config.bias         = bias;
+  config.learningRate = learningRate;
+  config.momentum     = momentum;
+  config.epoch        = epoch;
+  config.hActivation  = hActivation;
+  config.oActivation  = oActivation;
+  config.trainingFile = trainingFile;
+  config.labelsFile   = labelsFile;
+  config.weightsFile  = weightsFile;
 
+  return config;
+}
 
-   std::cout <<  n->getVal() << std::endl;
-   std::cout <<  n->getActivatedVal() << std::endl;
-   std::cout <<  n->getDerivedVal() << std::endl;
-   
-   matrix->printToConsole();
-   auto a = matrix->transpose();
-   a->printToConsole();
+int main(int argc, char **argv) {
 
-   nn->printToconsole();
+  if(argc != 2) {
+    printSyntax();
+    exit(-1);
+  }
 
-   return 0;
+  ifstream configFile(argv[1]);
+  string str((std::istreambuf_iterator<char>(configFile)),
+              std::istreambuf_iterator<char>());
+
+  NeuralNetwork *n  = new NeuralNetwork(buildConfig(json::parse(str)));
+
+  vector< vector<double> > trainingData = utils::Misc::fetchData(n->getConfig().trainingFile);
+  vector< vector<double> > labelData    = utils::Misc::fetchData(n->getConfig().labelsFile);
+
+  cout << "Training Data Size: " << trainingData.size() << endl;
+  cout << "Label Data Size: " << labelData.size() << endl;
+
+  for(int i = 0; i < n->getConfig().epoch; i++) {
+    for(int tIndex = 0; tIndex < trainingData.size(); tIndex++) {
+      vector<double> input    = trainingData.at(tIndex);
+      vector<double> target   = labelData.at(tIndex);
+
+      n->train(
+        input,
+        target,
+        n->getConfig().bias,
+        n->getConfig().learningRate,
+        n->getConfig().momentum
+      );
+    }
+    cout << n->getError() << endl;
+
+    //cout << "Error at epoch " << i+1 << ": " << n->error << endl;
+  }
+
+  cout << "Done! Writing to " << n->getConfig().weightsFile << "..." << endl;
+  n->saveWeights(n->getConfig().weightsFile);
+
+  return 0;
 }

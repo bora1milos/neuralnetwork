@@ -22,6 +22,8 @@ class Matrix
 
         double getValue(size_t r, size_t c);
 
+        std::vector< std::vector<double> > getValues() { return m_values; }
+
         double generateRandomNumber();
 
         void printToConsole();

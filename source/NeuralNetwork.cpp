@@ -349,7 +349,7 @@ void NeuralNetwork::backPropagation() {
   }
 }
 
-void NeuralNetwork::loadWeights(string filename) {
+void NeuralNetwork::loadWeights(std::string filename) {
   std::ifstream i(filename);
   nlohmann::json jWeights;
   i >> jWeights;
@@ -366,4 +366,23 @@ void NeuralNetwork::loadWeights(string filename) {
       }
     }
   }
+}
+
+void NeuralNetwork::saveWeights(string filename) {
+  nlohmann::json j  = {};
+
+  std::vector< vector< std::vector<double> > > weightSet;
+
+  for(int i = 0; i < m_weightMatrices.size(); i++) {
+    weightSet.push_back(m_weightMatrices.at(i)->getValues());
+  }
+
+  j["weights"]      = weightSet;
+  j["topology"]     = m_topology;
+  j["learningRate"] = m_learningRate;
+  j["momentum"]     = m_momentum;
+  j["bias"]         = m_bias;
+
+  std::ofstream o(filename);
+  o << std::setw(4) << j << endl;
 }
