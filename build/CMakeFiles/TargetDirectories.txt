@@ -1,3 +1,0 @@
-/home/bb/Projects/c++/neuralnetwork/build/CMakeFiles/rebuild_cache.dir
-/home/bb/Projects/c++/neuralnetwork/build/CMakeFiles/NeuralNetwork.dir
-/home/bb/Projects/c++/neuralnetwork/build/CMakeFiles/edit_cache.dir
