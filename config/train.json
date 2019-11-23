@@ -1,0 +1,12 @@
+{
+  "topology": [10, 8, 15, 10],
+  "learningRate": 0.05,
+  "momentum": 1.0,
+  "bias": 1.0,
+  "epoch": 100,
+  "trainingData": "D:\\Bora_Tools_Programing\\neuralnetwork\\config\\input.csv",
+  "labelData": "D:\\Bora_Tools_Programing\\neuralnetwork\\config\\output.csv",
+  "weightsFile": "D:\\Bora_Tools_Programing\\neuralnetwork\\config\\weights.json",
+  "hActivation": 1,
+  "oActivation":  1
+}
